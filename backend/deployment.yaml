@@ -4,6 +4,7 @@ metadata:
   name: backend
   namespace: test
 spec:
+  replicas: 1
   minReadySeconds: 3
   revisionHistoryLimit: 5
   progressDeadlineSeconds: 60
@@ -22,7 +23,6 @@ spec:
       labels:
         app: backend
     spec:
-      replicas: 1
       containers:
       - name: backend
         image: stefanprodan/podinfo:6.0.0
